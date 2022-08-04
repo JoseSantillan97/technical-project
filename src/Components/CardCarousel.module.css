@@ -1,0 +1,78 @@
+.card-container{
+	width: 100%;
+	padding: 0.3rem;
+}
+.card-carousel{
+	display: grid;
+    position: relative;
+	border-radius: 8px;
+}
+.card-address{
+	position: absolute;
+	color: #FFF !important;
+	width: 100%;
+	font-size: .7rem;
+	padding: 9px 8px;
+	display: flex;
+}
+.card-pin{
+	display: inline-block;
+	transform: scale(.8);
+}
+.card-image{
+	display: inline-block;
+	border-radius: 8px 8px 0 0;
+	width: 100%;
+	height: auto;
+}
+.card-information{
+	position: absolute;
+	bottom: 0px;
+	background-color: rgba(0,0,0,.8);
+	width: 100%;
+	border-radius: 8px 8px 0 0;
+	padding: 10px 8px 0px 8px;
+}
+.card-information-first-section{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 3px 0 15px 0;
+}
+.info-percentage img, .info-percentage p{
+	display: inline-block;
+	font-size: .8rem;
+	margin: 0;
+}
+.info-percentage progress{
+	width: 100%;
+	background-color: #00B451;
+	height: 3px;
+	display: block;
+}
+.info-lotes{
+	align-self: self-end;
+}
+.info-lotes p{
+	color: #008324;
+	font-size: .7rem;
+	text-transform: uppercase;
+	text-align: end;
+	margin: 0;
+}
+.card-information-second-section{
+	display: grid;
+	grid-template-columns: 4fr 6fr;
+	margin: 0px 0 15px 0;
+}
+.info-paragraphs{
+	text-transform: uppercase;
+}
+.info-paragraph1{
+	font-size: .55rem;
+	margin: 0;
+}
+.info-paragraph2{
+	font-size: .7rem;
+	margin: 0;
+	font-weight: bold;
+}

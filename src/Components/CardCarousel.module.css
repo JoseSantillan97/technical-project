@@ -27,7 +27,7 @@
 }
 .card-information{
 	position: absolute;
-	bottom: 0px;
+	bottom: 53px;
 	background-color: rgba(0,0,0,.8);
 	width: 100%;
 	border-radius: 8px 8px 0 0;
@@ -75,4 +75,35 @@
 	font-size: .7rem;
 	margin: 0;
 	font-weight: bold;
+}
+.info-button{
+	display: grid;
+	place-self: center;
+}
+.info-button button{
+	border: none;
+	background-color: #00B451;
+	padding: 6px 5px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: .7rem;
+}
+.card-information-title{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 7fr 3fr;
+	padding: 5px 0 5px 7px;
+	background-color: #CECECE;
+	border-radius: 0 0 5px 5px;
+}
+.card-slogan{
+	margin: 0;
+	font-weight: bold;
+}
+.card-title{
+	margin: 0;
+	font-size: .8rem;
+}
+.card-logo{
+	place-self: center;
 }

@@ -2,17 +2,17 @@ import React, { useState, useEffect } from "react";
 import CardCarousel from './CardCarousel'
 import Slider from "react-slick";
 
-const CarruselComponent = () => {
-	var [projects, setProjects] = useState(null);
+const CarruselComponent = ({projects}) => {
+	// var [projects, setProjects] = useState(null);
 
-	useEffect(() =>{
-		const getProjects = () => {
-			fetch('https://challenge.devkoore.com/api/projects')
-			.then(response => response.json())
-			.then(res => setProjects(res.projects))
-		}
-		getProjects()
-	}, [])
+	// useEffect(() =>{
+	// 	const getProjects = () => {
+	// 		fetch('https://challenge.devkoore.com/api/projects')
+	// 		.then(response => response.json())
+	// 		.then(res => setProjects(res.projects))
+	// 	}
+	// 	getProjects()
+	// }, [])
 
 	var settings = {
 		dots: false,

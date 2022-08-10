@@ -1,0 +1,143 @@
+.card-container{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 300px;
+	background-color: green;
+	z-index: 999;
+	position: relative;
+	border-radius: 1.5rem;
+	max-height: 400px;
+	
+}
+.card-container img {
+	width: 100%;
+	height: 100%;
+	border-radius: 1.5rem;
+	height: 400px;
+}
+.info-container{
+	position: absolute;
+	top: 0px;
+	padding: 1.2rem 1rem 1rem 1rem;
+	width: 300px;
+	box-shadow: inset 0rem -16rem 3.5rem -1rem rgba(4, 39, 33,.94);
+	border-radius: 1.5rem;
+	height: 100%;
+}
+.info-sec1{
+	width: 100%;
+	background-color: #000;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: grid;
+	place-content: center;
+}
+.info-sec1 img{
+	width: 30px;
+	height: auto;
+	display: grid;
+	place-self: center;
+	filter: brightness(4)
+}
+.info-sec2{
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin-top: 3rem;
+}
+.info-sec2 img{
+	width: 18px;
+	height: auto;
+}
+.sec2-text{
+	display: inline-block;
+	margin: 0;
+	color: #FFF;
+	font-size: .85rem;
+}
+.sec2-ventas{
+	text-transform: uppercase;
+	font-size: .65rem;
+}
+.info-sec2 progress{
+	display: block;
+	width: 91%;
+	background-color: green;
+	height: 3px;
+	margin-top: 3px;
+}
+/* .hr-container{
+	overflow: hidden;
+} */
+.section-hr{
+	margin: 0;
+	border: 0;
+	height: 0;
+	box-shadow: 0rem -1rem 1rem 1rem rgba(0, 180, 81, .35);
+
+}
+.info-sec3{
+	overflow: hidden;
+	white-space: nowrap;
+}
+.info-sec3::hover{
+	overflow-x: scroll;
+}
+.sec3-text{
+	margin: 1rem 0.5rem 0 0;
+	display: inline-block;
+	background-color: rgba(255, 255, 255, .3);
+	padding: 0px 8px;
+	border-radius: 5px;
+	font-size: .9rem;
+	color: #FFF;
+}
+::-webkit-scrollbar{
+	height: 8px;
+    width: 8px;
+}
+.info-sec4{
+	width: 100%;
+	margin: 1rem 0;
+	color: #FFF;
+}
+.sec4-name{
+	margin: 0;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+.info-sec4 .sec4-img{
+	width: 15px;
+	height: auto;
+}
+.sec4-address{
+	margin: 0;
+	display: inline-block;
+}
+.info-sec5{
+	color: #FFF;
+}
+.sec5-slogan{
+	margin: 0;
+	font-weight: bold;
+	font-size: .85rem;
+}
+.sec5-desc{
+	font-size: .9rem;
+	text-align:start
+}
+.info-sec6{
+	display: grid;
+}
+.sec6-btn{
+	display: grid;
+	justify-self: right;
+	border: none;
+	background-color: rgba(255, 255, 255, .09);
+	color: #FFF;
+	padding: 8px 15px;
+	text-transform: uppercase;
+	border-radius: 2rem;
+	font-size: .7rem;
+}

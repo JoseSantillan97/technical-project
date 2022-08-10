@@ -20,7 +20,7 @@ const CardCarousel = ({project}) => {
 								<progress id="file" value={project.salePercentage} max="100">{project.salePercentage}</progress>
 							</div>
 							<div className={styles['info-lotes']}>
-								<p>Ver lotes ></p>
+								<p>Ver lotes &gt;</p>
 							</div>
 						</div>
 						<div className={styles['card-information-second-section']}>

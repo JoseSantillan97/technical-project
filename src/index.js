@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
  
-mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zZXNhbnRpbGxhbjk3IiwiYSI6ImNsNmk2ZHQxcTBwcHAza241eW41c2RjeXcifQ.Iu-6vLIKN73IFe3_9RFtVA';
+mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zZXNhbnRpbGxhbjk3IiwiYSI6ImNsNmk1ajBmczBlcHEza3ByemFqdWplbDMifQ.Sm5ztLEbYcviwqRqG6Kg5w';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

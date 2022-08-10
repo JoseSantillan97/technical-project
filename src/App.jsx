@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import styles from './App.module.css';
 import CarruselComponent from './Components/CarruselComponent'
 import MapboxComponent from './Components/MapboxComponent'
+import CardMapComponent from './Components/MapCard/CardMapComponent'
+import {Routes, Route} from 'react-router-dom';
 
 const images = require.context('./images', true);
 
@@ -34,12 +36,13 @@ function App() {
           <li>Es </li>
         </ul>
       </header>
-      <section className={styles.main}>
+      {/* <section className={styles.main}>
         <div className={styles['image-container']}>
           <img src={ images('./main-image.png') } alt="" />
         </div>
-      </section>
+      </section> */}
       <MapboxComponent projects={projects}></MapboxComponent>
+      {/* <CardMapComponent></CardMapComponent> */}
       <section className={styles['invest-oportunities']}>
         <h1>Oportunidades de invesión confiables</h1>
         <p className={styles['invest-paragraph']}>Te ayudamos a encontrar el desarrollo que más se adapte a tus objetivos comerciales y/o patrimoniales</p>

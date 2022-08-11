@@ -1,12 +1,15 @@
 import React, {Component} from 'react'
 import styles from './CardMapComponent.module.css'
-import Slider from "react-slick";
-import { BrowserRouter, Routes, Link, Route } from 'react-router-dom';
+import App from './../../App'
+// import Slider from "react-slick";
+import { BrowserRouter, Routes,  Route, Switch, Link } from 'react-router-dom';
 import InformationComponent from './../Information/InformationComponent'
+import { useNavigate } from "react-router-dom";
 
 const images = require.context('./../../images', true);
 
 class CardMapComponent extends Component {
+	// const navigate = useNavigate()
 	state = {
 		settings: {
 			dots: false,
@@ -16,6 +19,7 @@ class CardMapComponent extends Component {
 			slidesToScroll: 3
 		}
 	}
+
 	render(){
 		return(
 			<div className=''>
@@ -55,15 +59,12 @@ class CardMapComponent extends Component {
 					</section>
 					<section className={styles['info-sec6']}>
 						<button className={styles['sec6-btn']}>
-							<BrowserRouter>
-								<Link to='/informacion'></Link>
-								{/* <Switch> */}
-									<Route path='/informacion'>
-									<InformationComponent />
-									</Route>
-								{/* </Switch> */}
-							</BrowserRouter>
-						conoce mas</button>
+							conoce más
+								<Routes>
+									<Route path="/about" element={ <InformationComponent /> }>About</Route>
+									<Route path="/" element={ null }>Home</Route>
+								</Routes>
+						</button>
 					</section>
 				</div>
 				</div>

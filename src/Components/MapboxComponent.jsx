@@ -64,10 +64,8 @@ class MapboxComponent extends Component{
 									<CardMapComponent project={this.state.selectedProject}>
 									<div key={this.state.selectedProject.id}>
 										<Popup
-										offsetTop={-3000}
 										latitude={this.state.selectedProject.geometry.coordinates[1]}
 										longitude={this.state.selectedProject.geometry.coordinates[0]}
-										// closeOnClick={true}
 										></Popup>
 									</div>
 									</CardMapComponent>

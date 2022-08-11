@@ -3,7 +3,8 @@ import styles from './App.module.css';
 import CarruselComponent from './Components/CarruselComponent'
 import MapboxComponent from './Components/MapboxComponent'
 import CardMapComponent from './Components/MapCard/CardMapComponent'
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route, Link} from 'react-router-dom';
+import InformationComponent from './Components/Information/InformationComponent';
 
 const images = require.context('./images', true);
 
@@ -20,6 +21,7 @@ function App() {
 	}, [])
   return (
     <div>
+      <InformationComponent></InformationComponent>
       <header>
         <ul>
           <li className={styles['navbar-logo']}>
@@ -27,7 +29,7 @@ function App() {
           </li>
         </ul>
         <ul className={styles['landrada-list']}>
-          <li>Inicio</li>
+          <li><Link to="/">Inicio</Link></li>
           <li>Desarrollos</li>
           <li>Herramientas</li>
           <li>Únete</li>

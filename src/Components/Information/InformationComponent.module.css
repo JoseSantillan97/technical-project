@@ -1,0 +1,64 @@
+.information{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	z-index: 999;
+	position: relative;
+	/* max-height: 400px; */
+	
+}
+.informacion-image{
+	width: 100%;
+}
+.information-image-section{
+	position: absolute;
+    top: 25%;
+    transform: translate(-25%, -25%);
+    left: 25%;
+}
+.information-sec1{
+	color: #FFF;
+	width: 120px;
+}
+.sec1-percentage{
+	display: inline-block;
+	margin: 0;
+}
+.sec1-ventas{
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: .6rem;
+	margin: 0;
+}
+.information-sec1 progress{
+	display: block;
+	width: 91%;
+	background-color: #58d20d;
+	height: 3px;
+	margin-top: 3px;
+}
+.information-sec2{
+	display: flex;
+	align-items: center;
+
+}
+.sec2-image{
+	width: 50px;
+	height: 50px;
+	background-color: #000;
+	border-radius: 50%;
+	display: grid;
+	border: 1px solid #58d20d;
+
+}
+.sec2-image img{
+	place-self: center;
+	width: 30px;
+	filter: brightness(4);
+}
+.sec2-title{
+	color: #FFF;
+	display: inline-block;
+	font-size: 3rem;
+	font-weight: bold;
+}

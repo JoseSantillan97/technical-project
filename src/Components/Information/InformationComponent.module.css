@@ -7,8 +7,12 @@
 	/* max-height: 400px; */
 	
 }
+.information-container{
+	box-shadow: inset 38rem 0rem 10.5rem 11rem rgb(4 39 33);
+}
 .informacion-image{
 	width: 100%;
+	filter: opacity(.3);
 }
 .information-image-section{
 	position: absolute;
@@ -39,8 +43,7 @@
 }
 .information-sec2{
 	display: flex;
-	align-items: center;
-
+	align-items: baseline;
 }
 .sec2-image{
 	width: 50px;
@@ -59,6 +62,32 @@
 .sec2-title{
 	color: #FFF;
 	display: inline-block;
-	font-size: 3rem;
+	font-size: 2.7rem;
 	font-weight: bold;
+	margin-left: 2rem;
+}
+.sec3-text{
+	color: #097644;
+}
+.sec3-description{
+	font-size: 1.3rem;
+	margin-bottom: 2rem;
+	width: 350px;
+	color: #FFF;
+}
+.sec4-address{
+	display: inline-block;
+	color: #FFF;
+	margin-left: .5rem;
+	font-size: .85rem;
+}
+.sec4-button{
+	display: block;
+	font-size: .7rem;
+	text-transform: uppercase;
+	padding: 8px 12px;
+	border: none;
+	background-color: #00b451;
+	color: #FFF;
+	border-radius: 3px;
 }

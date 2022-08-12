@@ -19,7 +19,6 @@ class CardMapComponent extends Component {
 				<button
 					className={styles['card-button']}
 					onClick={ () => {this.props.onClose(false)} }
-					// style={{ position: 'absolute', top: 0, right: 0, zIndex:9999 }}
 				>X</button>
 				<div className={styles['card-container']}>
 				<img src={this.props.project.image} alt="" />
@@ -60,7 +59,7 @@ class CardMapComponent extends Component {
 							<Link
 								to='informacion'
 								state={{ project: this.props.project }}
-								>conoce más
+								>conoce más &nbsp;&nbsp;&nbsp; &gt;
 							</Link>
 						</button>
 					</section>

@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CardCarousel from './CardCarousel'
 import Slider from "react-slick";
 import styles from './CardCarousel.module.css'
 
 const CarruselComponent = ({projects}) => {
+	const [matches, setMatches] = useState(
+		window.matchMedia("(min-width: 768px)").matches
+	  )
+	  useEffect(() => {
+		window
+		.matchMedia("(max-width: 700px)")
+		.addEventListener('change', e => setMatches( e.matches ));
+	  }, []);
 	var settings = {
-		dots: false,
+		dots: matches ? true : false,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 4,
+		slidesToShow: matches ? 2 : 4,
 		slidesToScroll: 1
 	};
 
@@ -20,7 +28,7 @@ const CarruselComponent = ({projects}) => {
 						projects && projects.map((project) => {
 							return(
 								<div key={project.id}>
-									<CardCarousel project={project}></CardCarousel>
+									<CardCarousel className='' project={project}></CardCarousel>
 								</div>
 							)
 						})

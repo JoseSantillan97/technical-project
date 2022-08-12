@@ -148,7 +148,7 @@
 	position: relative;
 }
 
-.landrada-img>img {
+.join-image {
 	border-radius: 15px 0 0 15px;
 	width: 100%;
 	min-width: 346px;
@@ -157,7 +157,7 @@
 	position: absolute;
 	bottom: 0;
 	width: 75px;
-	transform: skewY(180deg);
+	transform: scaleX(-1);;
 	right: 0;
 }
 .form-img2{
@@ -255,4 +255,36 @@ input[type="tel"] {
 	letter-spacing: 1px;
 	border-radius: 3px;
 	font-weight: bold;
+}
+@media only screen and (min-width: 300px) and (max-width: 700px){
+	.invest-image1{
+		width: 100%;
+	}
+	.invest-oportunities{
+		margin-top: 220px;
+	}
+	.why-invest{
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.invest-info{
+		width: 90%;
+		margin: 0 auto;
+	}
+	.invest-info-title{
+		text-align: center;
+	}
+	.invest-info-paragraph1,
+	.invest-info-paragraph2,
+	.invest-info-paragraph3{
+		text-align: center;
+	}
+	.invest-info-button{
+		display: block;
+		margin: 1rem auto;
+	}
+	.join-form{
+		grid-template-columns: none;
+		grid-template-rows: 1fr 1fr;
+	}
 }

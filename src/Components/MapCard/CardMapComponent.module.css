@@ -158,3 +158,10 @@
 	border-radius: 2rem;
 	font-size: .7rem;
 }
+.sec6-btn a{
+	text-decoration: none;
+	color: #FFF;
+}
+.sec6-btn a:hover{
+	color: #FFF;
+}

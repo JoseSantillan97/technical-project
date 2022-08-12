@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import mapboxgl from "mapbox-gl";
 import Map, { Marker, Popup } from 'react-map-gl';
-import CardMapComponent from "./MapCard/CardMapComponent";
+import CardMapComponent from "../MapCard/CardMapComponent";
+import styles from './MapboxComponent.module.css'
 
-const images = require.context('./../images', true);
+const images = require.context('./../../images', true);
 
 
 class MapboxComponent extends Component {
@@ -23,14 +24,24 @@ class MapboxComponent extends Component {
 	}
 	
 	onClosePop = (a) => {
-		// this.setState({selectedProject: "",open: false})
 		setTimeout(() =>{
-			console.log('info', this.setState({selectedProject: '',open: false}) ,a)
+			this.setState({selectedProject: '',open: false})
 		}, 0)
 	};
 	render() {
 		return (
 			<div>
+				<div className={styles['contenedor-map']}>
+					<div className={styles['image-container']}>
+						<img className={styles['image-main']} src={images('./movil-landrada.png')} alt="" />
+					</div>
+					<div className={styles['text-container']}>
+						<p className={styles['text-title']}>Inversión con conciencia</p>
+						<p className={styles['text-text']}>En <span className={styles['text-landrada']}>Landrada Desarrollos</span> te brindamos oportunidades de inversión confiables que se ajustan a tus objetivos comerciales y patrimoniales.</p>
+						<button className={styles['text-button']}>comenzar a invertir</button>
+						<p className={styles['text-last']}>¡conócenos!</p>
+					</div>
+				</div>
 				<Map
 					style={{
 						backgroundColor: 'green',
@@ -40,11 +51,6 @@ class MapboxComponent extends Component {
 					{...this.state.viewport}
 					mapboxApiAccessToken="pk.eyJ1Ijoiam9zZXNhbnRpbGxhbjk3IiwiYSI6ImNsNmk1ajBmczBlcHEza3ByemFqdWplbDMifQ.Sm5ztLEbYcviwqRqG6Kg5w"
 					mapStyle="mapbox://styles/mapbox/satellite-v9"
-				// onViewportChange={viewport => {
-				// 	this.setState({
-				// 		viewport: viewport
-				// 	})
-				// }}
 				>
 					{
 						this.props.projects && this.props.projects.map(project => (

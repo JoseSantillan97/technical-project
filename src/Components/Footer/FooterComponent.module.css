@@ -1,52 +1,85 @@
 /* FOOTER */
-footer{
+footer {
 	background-image: url('./../../images/footer-image.svg');
 	background-attachment: cover;
-  }
-  .footer-container{
+}
+
+.footer-container {
 	display: grid;
 	grid-template-columns: 4fr 2fr 2fr 4fr;
 	width: 85%;
 	margin: auto;
 	padding: 4rem 0;
-  }
-  .footer-sec1-text{
+}
+
+.footer-sec1-text {
 	font-size: .95rem;
 	margin-top: 1rem;
 	color: #FFF;
-  }
-  .footer-sec1-img{
+}
+
+.footer-sec1-img {
 	width: 65%;
 	display: flex;
 	justify-content: space-between;
 	padding-top: .3rem;
-  }
-  .footer-navegacion, .footer-desarrollos, .footer-contacto{
+}
+
+.footer-navegacion,
+.footer-desarrollos,
+.footer-contacto {
 	justify-self: center;
 	padding-top: 4rem;
-  }
-  .footer-navegacion p, .footer-desarrollos p{
+}
+
+.footer-navegacion p,
+.footer-desarrollos p {
 	color: #008324;
-  }
-  .footer-navegacion ul, .footer-desarrollos ul {
+}
+
+.footer-navegacion ul,
+.footer-desarrollos ul {
 	color: #FFF;
 	list-style: none;
 	padding: 0;
-  }
-  .footer-contacto{
+}
+
+.footer-contacto {
 	width: 80%;
 	color: #FFF;
-  }
-  footer .rights{
+}
+
+footer .rights {
 	display: grid;
 	width: 100%;
 	place-content: center;
 	padding-bottom: 2rem;
-  }
-  footer .rights p{
+}
+
+footer .rights p {
 	text-align: center;
 	margin: 0 auto;
 	font-size: .8rem;
 	line-height: 2;
 	color: #FFF;
-  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+	.footer-container {
+		grid-template-columns: none;
+	}
+
+	.footer-sec1 {
+		text-align: center;
+	}
+
+	.footer-sec1-img {
+		width: 50%;
+		margin: auto;
+	}
+
+	.footer-navegacion-desarrollos {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}

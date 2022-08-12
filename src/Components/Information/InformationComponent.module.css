@@ -195,3 +195,18 @@
 	border-radius: 4px;
 	box-shadow: 0 0 14px rgba(0,0,0,.1);
 }
+@media only screen and (min-width: 300px) and (max-width: 700px){
+	.information-image-section{
+		top: 5.5%;
+	}
+	.images-sec1, .images-sec2{
+		display: grid;
+		grid-template-columns: none;
+	}
+	.invest-container{
+		grid-template-columns: 1fr;
+	}
+	.invest-container-text, .invest-button-container{
+		place-self: center;
+	}
+}

@@ -12,10 +12,15 @@
     background-color: #00b451;
     border-radius: 4px;
 }
+.slick-dots .slick-active .slick-arrow::before{
+	color: green;
+	opacity: 1;
+}
 .card-container{
 	width: 100%;
 	padding: 0.3rem;
 	max-height: 562px;
+	/* min-width: 290px; */
 }
 .card-carousel{
 	display: grid;
@@ -117,6 +122,9 @@
 .card-link{
 	color: #FFF;
 	text-decoration: none;
+}
+.card-link:hover{
+	color: #FFF;
 }
 .card-information-title{
 	width: 100%;

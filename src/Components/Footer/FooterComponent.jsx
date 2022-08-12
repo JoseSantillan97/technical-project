@@ -9,7 +9,7 @@ class FooterComponent extends Component {
 			<div>
 				<footer>
 					<section className={styles['footer-container']}>
-						<article>
+						<article className={styles['footer-sec1']}>
 							<div>
 								<img src={images('./landrada-desarrollos.svg')} alt="Landrada Desarrollos logo" />
 							</div>

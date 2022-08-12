@@ -1,4 +1,4 @@
-header{
+header {
 	display: grid;
 	width: 100%;
 	height: 80px;
@@ -6,31 +6,47 @@ header{
 	z-index: 9999;
 	grid-template-columns: 4fr 10fr;
 	/* margin: auto; */
-  }
-  header ul{
+}
+
+header ul {
 	list-style-type: none;
 	height: 100%;
 	align-content: space-around;
 	margin: 0;
 	padding: 0;
-  }
-  .navbar-logo{
+}
+
+.navbar-logo {
 	display: grid;
 	align-content: center;
 	width: 100%;
 	height: 100%;
-  }
-  .navbar-logo img{
+}
+
+.navbar-logo img {
 	width: 170px;
 	height: auto;
 	margin: 0 auto;
-  }
-  .landrada-list, .landrada-list a{
+}
+
+.landrada-list,
+.landrada-list a {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
 	color: #FFF;
 	text-decoration: none;
-  }
-  .landrada-list:hover{
+}
+
+.landrada-list:hover {
 	color: #FFF;
-  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+	.landrada-list a {
+		font-size: .7rem;
+	}
+
+	.navbar-logo img {
+		width: 150px;
+	}
+}

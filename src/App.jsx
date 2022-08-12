@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import MapboxComponent from './Components/MapboxComponent'
+import MapboxComponent from './Components/Mapbox/MapboxComponent'
 import MainContentComponent from './Components/MainPage/MainContentComponent';
 import HeaderComponent from './Components/Header/HeaderComponent';
 import FooterComponent from './Components/Footer/FooterComponent';

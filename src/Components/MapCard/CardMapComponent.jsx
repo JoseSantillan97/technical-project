@@ -1,28 +1,26 @@
 import React, {Component} from 'react'
 import styles from './CardMapComponent.module.css'
-import App from './../../App'
-// import Slider from "react-slick";
-import { BrowserRouter, Routes,  Route, Switch, Link } from 'react-router-dom';
-import InformationComponent from './../Information/InformationComponent'
-import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const images = require.context('./../../images', true);
 
 class CardMapComponent extends Component {
-	// const navigate = useNavigate()
-	state = {
-		settings: {
-			dots: false,
-			infinite: false,
-			speed: 400,
-			slidesToShow: 4,
-			slidesToScroll: 3
-		}
+	constructor(props){
+		super(props);
+		// this.props.onClose = this.props.onClose.bind(this)
 	}
-
+	clickHandler = (e) => {
+		this.props.onClose(e)
+		console.log('hijo',e)
+	}
 	render(){
 		return(
 			<div className=''>
+				<button
+					className={styles['card-button']}
+					onClick={ () => {this.props.onClose(false)} }
+					// style={{ position: 'absolute', top: 0, right: 0, zIndex:9999 }}
+				>X</button>
 				<div className={styles['card-container']}>
 				<img src={this.props.project.image} alt="" />
 				<div className={styles['info-container']}>
@@ -59,11 +57,11 @@ class CardMapComponent extends Component {
 					</section>
 					<section className={styles['info-sec6']}>
 						<button className={styles['sec6-btn']}>
-							conoce más
-								<Routes>
-									<Route path="/about" element={ <InformationComponent /> }>About</Route>
-									<Route path="/" element={ null }>Home</Route>
-								</Routes>
+							<Link
+								to='informacion'
+								state={{ project: this.props.project }}
+								>conoce más
+							</Link>
 						</button>
 					</section>
 				</div>

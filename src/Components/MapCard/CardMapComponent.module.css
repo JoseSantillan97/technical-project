@@ -1,3 +1,18 @@
+.card-button{
+	position: absolute;
+    top: .5rem;
+    right: 5px;
+    z-index: 9999;
+	background-color: transparent;
+    color: red;
+    border: none;
+    border-radius: 1rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
 .card-container{
 	position: absolute;
 	top: 0%;
@@ -101,6 +116,7 @@
 	width: 100%;
 	margin: 1rem 0;
 	color: #FFF;
+	text-align: left;
 }
 .sec4-name{
 	margin: 0;
@@ -122,6 +138,7 @@
 	margin: 0;
 	font-weight: bold;
 	font-size: .85rem;
+	text-align: left;
 }
 .sec5-desc{
 	font-size: .9rem;

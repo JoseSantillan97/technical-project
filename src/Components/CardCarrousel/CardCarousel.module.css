@@ -1,3 +1,17 @@
+.slider > button{
+	display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #00b451;
+    border-radius: 4px;
+}
+.slider > button:hover{
+	display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #00b451;
+    border-radius: 4px;
+}
 .card-container{
 	width: 100%;
 	padding: 0.3rem;
@@ -100,13 +114,18 @@
 	word-spacing: 2px;
 	font-weight: bold;
 }
+.card-link{
+	color: #FFF;
+	text-decoration: none;
+}
 .card-information-title{
 	width: 100%;
 	display: grid;
 	grid-template-columns: 7fr 3fr;
 	padding: 5px 0 5px 7px;
-	background-color: #CECECE;
+	background-color: #FFF;
 	border-radius: 0 0 5px 5px;
+	background-image: url('./../../images/card-decoration2.svg');
 }
 .card-slogan{
 	margin: 0;

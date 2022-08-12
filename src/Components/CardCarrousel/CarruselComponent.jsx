@@ -1,19 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CardCarousel from './CardCarousel'
 import Slider from "react-slick";
+import styles from './CardCarousel.module.css'
 
 const CarruselComponent = ({projects}) => {
-	// var [projects, setProjects] = useState(null);
-
-	// useEffect(() =>{
-	// 	const getProjects = () => {
-	// 		fetch('https://challenge.devkoore.com/api/projects')
-	// 		.then(response => response.json())
-	// 		.then(res => setProjects(res.projects))
-	// 	}
-	// 	getProjects()
-	// }, [])
-
 	var settings = {
 		dots: false,
 		infinite: true,
@@ -23,9 +13,9 @@ const CarruselComponent = ({projects}) => {
 	};
 
 	return (
-		<div className="my-4" style={{width: '88%',margin:'auto'}}>
+		<div className="my-4" style={{width: '88%',margin:'auto',maxWidth: 1600}}>
 			<div className="row">
-				<Slider {...settings}>
+				<Slider className={styles.slider} {...settings}>
 					{
 						projects && projects.map((project) => {
 							return(

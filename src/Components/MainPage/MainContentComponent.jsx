@@ -39,12 +39,13 @@ class MainContentComponent extends Component {
 							<img className={styles['join-image']} src={images('./join-landrada.svg')} alt="" />
 							<img className={styles['form-img1']} src={images('./form-decoration.svg')} alt="" />
 							<img className={styles['form-img2']} src={images('./form-decoration3.svg')} alt="" />
+							<img className={styles['join-logo']} src={images('./little-logo1.svg')} alt="" />
 							<p className={styles['join-paragraph2']}>
-								<img className={styles['join-logo']} src={images('./little-logo1.svg')} alt="" />
-								Te compartimos cómo estamos ayudando a nuestros inversionistas a encontrar los mejores Desarrollos y terrenos de inversión, alramente rentables.</p>
+								Te compartimos cómo estamos ayudando a nuestros inversionistas a encontrar los mejores Desarrollos y terrenos de inversión, alramente rentables.
+							</p>
 						</div>
 						<div className={styles['landrada-form']}>
-							<p className={styles['form-title']}>¡Tu inversión inteligente <p className={styles['form-title-g']}>está a solo un clic de distancia!</p></p>
+							<p className={styles['form-title']}>¡Tu inversión inteligente <span className={styles['form-title-g']}>está a solo un clic de distancia!</span></p>
 							<div className={styles['form-first-container']}>
 								<label className={styles['form-first']} htmlFor="invest">
 									<input type="checkbox" name="" id="invest" value='' />

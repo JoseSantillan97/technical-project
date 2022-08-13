@@ -5,21 +5,15 @@ import { Link } from 'react-router-dom';
 const images = require.context('./../../images', true);
 
 class CardMapComponent extends Component {
-	constructor(props){
-		super(props);
-		// this.props.onClose = this.props.onClose.bind(this)
-	}
-	clickHandler = (e) => {
-		this.props.onClose(e)
-		console.log('hijo',e)
-	}
 	render(){
 		return(
-			<div className=''>
-				<button
+			<div>
+				<div
 					className={styles['card-button']}
 					onClick={ () => {this.props.onClose(false)} }
-				>X</button>
+				>
+					<span>X</span>
+				</div>
 				<div className={styles['card-container']}>
 				<img src={this.props.project.image} alt="" />
 				<div className={styles['info-container']}>
@@ -38,8 +32,8 @@ class CardMapComponent extends Component {
 						<hr className={styles['section-hr']} />
 					<section className={styles['info-sec3']}>
 					{
-						this.props.project && this.props.project.amenities.map(element => (
-							<p className={styles['sec3-text']}>{element}</p>
+						this.props.project && this.props.project.amenities.map((element, index) => (
+							<p key={index} className={styles['sec3-text']}>{element}</p>
 							))
 						}
 					</section>
@@ -55,13 +49,13 @@ class CardMapComponent extends Component {
 						<p className={styles['sec5-desc']}>{this.props.project.description}</p>
 					</section>
 					<section className={styles['info-sec6']}>
-						<button className={styles['sec6-btn']}>
+						<div className={styles['sec6-btn']}>
 							<Link
 								to='informacion'
 								state={{ project: this.props.project }}
 								>conoce más &nbsp;&nbsp;&nbsp; &gt;
 							</Link>
-						</button>
+						</div>
 					</section>
 				</div>
 				</div>

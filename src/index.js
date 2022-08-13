@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
+import mapboxgl from 'mapbox-gl';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import InformationComponent from './Components/Information/InformationComponent';
 
@@ -17,7 +17,6 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/informacion" index element={<InformationComponent />} />
       </Routes>
-      {/* <App /> */}
     </BrowserRouter>
   </React.StrictMode>
 );

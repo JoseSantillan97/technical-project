@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import HeaderComponent from './../Header/HeaderComponent';
 import FooterComponent from './../Footer/FooterComponent';
 import styles from './InformationComponent.module.css'
@@ -8,11 +8,7 @@ const images = require.context('./../../images', true);
 
 const InformationComponent = () => {
 	
-	const location = useLocation()
-
-	React.useEffect(()=>{
-		console.log('location', location)
-	},[])
+const location = useLocation()
 
 	return (
 		<div>
@@ -55,8 +51,8 @@ const InformationComponent = () => {
 						<p className={styles['enjoy-text']}>Ayudamos a nuestros inversionistas a encontrar los mejores Desarrollos y terrenos de inversión, altamente rentables</p>
 						<p className={styles['enjoy-amenities']}>Amenidades</p>
 						{
-							location.state.project && location.state.project.amenities.map(amenity => (
-								<p className={styles['enjoy-amenity']}>{amenity}</p>
+							location.state.project && location.state.project.amenities.map((amenity, index) => (
+								<p key={index} className={styles['enjoy-amenity']}>{amenity}</p>
 							))
 						}
 					</div>

@@ -29,14 +29,16 @@ const CardCarousel = ({ project }) => {
 							<p className={styles['info-paragraph1']}>Invierte ahora y</p>
 							<p className={styles['info-paragraph2']}>Paga online</p>
 						</div>
-						<a className={styles['info-button']} href="#"><button>
-							<Link
-								className={styles['card-link']}
-								to='informacion'
-								state={{ project: project }}>
-								conoce más
-							</Link>
-						</button></a>
+						<div className={styles['info-button']} href="#">
+							<button>
+								<Link
+									className={styles['card-link']}
+									to='/informacion'
+									state={{ project: project }}>
+									conoce más
+								</Link>
+							</button>
+						</div>
 					</div>
 				</div>
 				<div className={styles['card-information-title']}>

@@ -3,6 +3,7 @@ import mapboxgl from "mapbox-gl";
 import Map, { Marker, Popup } from 'react-map-gl';
 import CardMapComponent from "../MapCard/CardMapComponent";
 import styles from './MapboxComponent.module.css'
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 const images = require.context('./../../images', true);
 

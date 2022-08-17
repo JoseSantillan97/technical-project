@@ -13,6 +13,26 @@ import "swiper/css/scrollbar";
 const images = require.context("./../../images", true);
 
 const CarruselComponent = ({ projects }) => {
+  
+  
+  const [matches, setMatches] = useState(
+    window.matchMedia("(max-width: 1100px)").matches
+  )
+  useEffect(() => {
+    if(window.innerWidth > 1100){
+      window
+        .matchMedia("(max-width: 1100px)")
+        .addEventListener('change', e => setMatches(e.matches));
+        console.log('match 1:', matches)
+    }
+    else if( window.innerWidth < 768 ){
+      window
+        .matchMedia("(max-width: 768px)")
+        .addEventListener('change', e => setMatches(e.matches));
+        console.log('match 2:', matches)
+    }
+  }, []);
+  
   return (
     <div
       className="my-4"
@@ -22,7 +42,7 @@ const CarruselComponent = ({ projects }) => {
         <Swiper
           modules={[Navigation]}
           spaceBetween={50}
-          slidesPerView={4}
+          slidesPerView={matches ? 2 : 4}
           navigation={{ clickable: true }}
         >
           {projects &&

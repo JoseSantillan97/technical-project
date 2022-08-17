@@ -91,38 +91,38 @@ class MapboxComponent extends Component {
                         style={{
                           height: "22px",
                           width: "22px",
-                          display: `${!this.state
-                            .selectedProject} ? 'none' : "none"`,
-                        }}
+                          display: this.state
+                            .selectedProject ? 'none' : 'block',
+                          }}
                         src={images("./pin-map.svg")}
                         alt="marker"
                       />
-                    )}
-                  </button>
-                  {this.state.selectedProject &&
-                    this.state.selectedProject.id ? (
-                    <div ref={this.myRef} style={{ position: "relative" }}>
-                      <CardMapComponent
-                        key={this.state.selectedProject.id}
-                        onClose={this.onClosePop}
-                        project={this.state.selectedProject}
-                      >
-                        <div key={this.state.selectedProject.id}>
-                          <Popup
-                            // {...this.state.open = true}
-                            latitude={
-                              this.state.selectedProject.geometry
-                                .coordinates[1]
-                            }
-                            longitude={
-                              this.state.selectedProject.geometry
-                                .coordinates[0]
-                            }
-                          ></Popup>
-                        </div>
-                      </CardMapComponent>
-                    </div>
-                  ) : null}
+                      )}
+                        </button>
+                    {this.state.selectedProject &&
+                      this.state.selectedProject.id === project.id? (
+                      <div ref={this.myRef} style={{ position: "relative" }}>
+                        <CardMapComponent
+                          key={this.state.selectedProject.id}
+                          onClose={this.onClosePop}
+                          project={this.state.selectedProject}
+                        >
+                          <div key={this.state.selectedProject.id}>
+                            <Popup
+                              {...this.state.open = true}
+                              latitude={
+                                this.state.selectedProject.geometry
+                                  .coordinates[1]
+                              }
+                              longitude={
+                                this.state.selectedProject.geometry
+                                  .coordinates[0]
+                              }
+                            ></Popup>
+                          </div>
+                        </CardMapComponent>
+                      </div>
+                    ) : null}
                 </Marker>
               ))}
           </ReactMapGL>
